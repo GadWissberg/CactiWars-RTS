@@ -1,20 +1,17 @@
 package com.gadarts.cactiwars;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.utils.ScreenUtils;
+import com.badlogic.gdx.Game;
 
-public class CactiWars extends ApplicationAdapter {
+public class CactiWars extends Game {
+	public static final int FULL_SCREEN_RESOLUTION_WIDTH = 1920;
+	public static final int FULL_SCREEN_RESOLUTION_HEIGHT = 1080;
+	public static final int WINDOWED_RESOLUTION_WIDTH = 1280;
+	public static final int WINDOWED_RESOLUTION_HEIGHT = 960;
 
 	@Override
-	public void create () {
+	public void create( ) {
+		setScreen(new BattleScreen());
 	}
 
-	@Override
-	public void render () {
-		ScreenUtils.clear(1, 0, 0, 1);
-	}
-	
-	@Override
-	public void dispose () {
-	}
+
 }
