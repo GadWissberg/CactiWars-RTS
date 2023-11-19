@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 @Getter
 public enum Systems {
 	CAMERA(new CameraSystem()),
-	RENDER(new RenderSystem());
+	RENDER(new RenderSystem()),
+	ENVIRONMENT(new EnvironmentSystem());
 
 	private final GameEntitySystem instance;
 

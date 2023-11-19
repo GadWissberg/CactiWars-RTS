@@ -19,7 +19,7 @@ public class BattleScreen implements Screen {
 				.map(Systems::getInstance)
 				.forEach(instance -> dispatcher.getInstance().addListener(instance)));
 		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().createGlobalData(systemsGlobalData));
-		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().initialize());
+		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().onGlobalDataReady());
 	}
 
 	@Override

@@ -34,7 +34,7 @@ public class RenderSystem extends GameEntitySystem {
 	}
 
 	@Override
-	public void initialize( ) {
+	public void onGlobalDataReady( ) {
 	}
 
 	@Override
@@ -49,6 +49,7 @@ public class RenderSystem extends GameEntitySystem {
 	@Override
 	public void update(float deltaTime) {
 		super.update(deltaTime);
+		Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		ScreenUtils.clear(Color.BLACK, true);
 		modelBatch.begin(systemsGlobalData.getCamera());
 		for (int i = 0; i < modelEntities.size(); i++) {

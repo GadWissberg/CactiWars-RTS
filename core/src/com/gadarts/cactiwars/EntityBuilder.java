@@ -1,5 +1,6 @@
 package com.gadarts.cactiwars;
 
+import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.PooledEngine;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
@@ -19,8 +20,8 @@ public class EntityBuilder {
 	@Getter
 	private Entity currentEntity;
 
-	public static EntityBuilder beginBuildingEntity(PooledEngine engine) {
-		instance.init(engine);
+	public static EntityBuilder beginBuildingEntity(Engine engine) {
+		instance.init((PooledEngine) engine);
 		return instance;
 	}
 

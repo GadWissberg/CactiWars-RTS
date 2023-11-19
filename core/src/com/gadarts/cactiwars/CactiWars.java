@@ -1,6 +1,7 @@
 package com.gadarts.cactiwars;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 
 public class CactiWars extends Game {
 	public static final int FULL_SCREEN_RESOLUTION_WIDTH = 1920;
@@ -10,6 +11,11 @@ public class CactiWars extends Game {
 
 	@Override
 	public void create( ) {
+		if (DebugSettings.FULL_SCREEN) {
+			Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
+		} else {
+			Gdx.graphics.setWindowedMode(WINDOWED_RESOLUTION_WIDTH, WINDOWED_RESOLUTION_HEIGHT);
+		}
 		setScreen(new BattleScreen());
 	}
 

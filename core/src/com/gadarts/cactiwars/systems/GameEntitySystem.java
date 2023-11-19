@@ -27,7 +27,7 @@ public abstract class GameEntitySystem extends EntitySystem implements Disposabl
 		return false;
 	}
 
-	public abstract void initialize( );
+	public abstract void onGlobalDataReady( );
 
 	public void addListener(GameEntitySystem listener) {
 		if (listener.getEventsListenList() == null) return;
