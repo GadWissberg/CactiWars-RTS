@@ -16,7 +16,9 @@ public class CactiWars extends Game {
 		} else {
 			Gdx.graphics.setWindowedMode(WINDOWED_RESOLUTION_WIDTH, WINDOWED_RESOLUTION_HEIGHT);
 		}
-		setScreen(new BattleScreen());
+		GameAssetManager assetsManager = new GameAssetManager();
+		assetsManager.loadGameFiles();
+		setScreen(new BattleScreen(assetsManager));
 	}
 
 

@@ -10,8 +10,10 @@ import java.util.Arrays;
 
 public class BattleScreen implements Screen {
 	private final PooledEngine engine;
+	private final GameAssetManager assetsManager;
 
-	public BattleScreen( ) {
+	public BattleScreen(GameAssetManager assetsManager) {
+		this.assetsManager = assetsManager;
 		engine = new PooledEngine();
 		SystemsGlobalData systemsGlobalData = new SystemsGlobalData();
 		Arrays.stream(Systems.values()).forEach(system -> engine.addSystem(system.getInstance()));
@@ -19,7 +21,7 @@ public class BattleScreen implements Screen {
 				.map(Systems::getInstance)
 				.forEach(instance -> dispatcher.getInstance().addListener(instance)));
 		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().createGlobalData(systemsGlobalData));
-		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().onGlobalDataReady());
+		Arrays.stream(Systems.values()).forEach(system -> system.getInstance().onGlobalDataReady(assetsManager));
 	}
 
 	@Override

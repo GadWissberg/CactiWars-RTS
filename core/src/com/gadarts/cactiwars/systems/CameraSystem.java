@@ -5,6 +5,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.gadarts.cactiwars.DebugSettings;
+import com.gadarts.cactiwars.GameAssetManager;
 
 import java.util.List;
 
@@ -33,14 +34,14 @@ public class CameraSystem extends GameEntitySystem implements InputProcessor {
 		cam.near = NEAR;
 		cam.far = FAR;
 		cam.update();
-		cam.position.set(2, 8, 2);
+		cam.position.set(2, 8, 4);
 		cam.lookAt(2, 0, 0);
 		systemsGlobalData.setCamera(cam);
 		Gdx.input.setInputProcessor(this);
 	}
 
 	@Override
-	public void onGlobalDataReady( ) {
+	public void onGlobalDataReady(GameAssetManager assetsManager) {
 		dispatcher.dispatchMessage(SystemEvents.CAMERA_CREATED.ordinal());
 	}
 

@@ -5,6 +5,7 @@ import com.badlogic.gdx.ai.msg.MessageDispatcher;
 import com.badlogic.gdx.ai.msg.Telegram;
 import com.badlogic.gdx.ai.msg.Telegraph;
 import com.badlogic.gdx.utils.Disposable;
+import com.gadarts.cactiwars.GameAssetManager;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public abstract class GameEntitySystem extends EntitySystem implements Disposabl
 		return false;
 	}
 
-	public abstract void onGlobalDataReady( );
+	public abstract void onGlobalDataReady(GameAssetManager assetsManager);
 
 	public void addListener(GameEntitySystem listener) {
 		if (listener.getEventsListenList() == null) return;
