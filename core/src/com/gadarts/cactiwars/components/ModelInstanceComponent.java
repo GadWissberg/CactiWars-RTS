@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import lombok.Getter;
 
 @Getter
-public class ModelInstanceComponent extends GameComponent {
+public class ModelInstanceComponent implements GameComponent {
 	private ModelInstance modelInstance;
 
 	@Override

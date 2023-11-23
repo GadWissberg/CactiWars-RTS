@@ -5,7 +5,7 @@ import com.badlogic.gdx.ai.msg.MessageDispatcher;
 import com.badlogic.gdx.ai.msg.Telegram;
 import com.badlogic.gdx.ai.msg.Telegraph;
 import com.badlogic.gdx.utils.Disposable;
-import com.gadarts.cactiwars.GameAssetManager;
+import com.gadarts.cactiwars.assets.GameAssetManager;
 
 import java.util.List;
 

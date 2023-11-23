@@ -2,6 +2,7 @@ package com.gadarts.cactiwars;
 
 import com.badlogic.ashley.core.PooledEngine;
 import com.badlogic.gdx.Screen;
+import com.gadarts.cactiwars.assets.GameAssetManager;
 import com.gadarts.cactiwars.systems.GameEntitySystem;
 import com.gadarts.cactiwars.systems.Systems;
 import com.gadarts.cactiwars.systems.SystemsGlobalData;
@@ -10,10 +11,8 @@ import java.util.Arrays;
 
 public class BattleScreen implements Screen {
 	private final PooledEngine engine;
-	private final GameAssetManager assetsManager;
 
 	public BattleScreen(GameAssetManager assetsManager) {
-		this.assetsManager = assetsManager;
 		engine = new PooledEngine();
 		SystemsGlobalData systemsGlobalData = new SystemsGlobalData();
 		Arrays.stream(Systems.values()).forEach(system -> engine.addSystem(system.getInstance()));

@@ -2,6 +2,7 @@ package com.gadarts.cactiwars;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.gadarts.cactiwars.assets.GameAssetManager;
 
 public class CactiWars extends Game {
 	public static final int FULL_SCREEN_RESOLUTION_WIDTH = 1920;

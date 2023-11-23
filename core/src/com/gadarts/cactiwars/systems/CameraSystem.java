@@ -5,7 +5,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.gadarts.cactiwars.DebugSettings;
-import com.gadarts.cactiwars.GameAssetManager;
+import com.gadarts.cactiwars.assets.GameAssetManager;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class CameraSystem extends GameEntitySystem implements InputProcessor {
 	private static final float NEAR = 0.01f;
 	private static final int SCROLL_PADDING = 100;
 	public static final float SCREEN_SCROLL_SPEED = 0.2F;
-	public static final int SCALE_FACTOR = 25;
+	public static final int SCALE_FACTOR = 50;
 	private static final float PADDING_EDGE = 15F;
 	private final Vector2 lastMousePosition = new Vector2();
 
